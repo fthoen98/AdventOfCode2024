@@ -1,4 +1,3 @@
-import logging
 
 
 def read_input(file_path: str):
@@ -8,11 +7,11 @@ def read_input(file_path: str):
             if line.strip():
                 report = line.split()
                 data.append(list(map(int, report)))
+                print(data)
         return data
 
 
 def count_safe_reports(data):
-    count = 0
     firstSort = [
         report
         for report in data
@@ -28,4 +27,4 @@ if __name__ == "__main__":
     file_path = "data.txt"
     data = read_input(file_path)
     nb_safe_reports = count_safe_reports(data)
-    print(f"The number of safe report is {nb_safe_reports}\n")
+    # print(f"The number of safe report is {nb_safe_reports}\n")
