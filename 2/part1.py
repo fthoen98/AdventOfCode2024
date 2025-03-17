@@ -16,7 +16,11 @@ def count_safe_reports(data):
         if sorted(report) == report or sorted(report, reverse=True) == report
     ]
     return sum(
-        1 if all(1 <= abs(a - b) <= 3 for a, b in zip(report, report[1:])) else 0
+        (
+            1
+            if all(1 <= abs(a - b) <= 3 for a, b in zip(report, report[1:]))
+            else 0
+        )
         for report in firstSort
     )
 

@@ -34,4 +34,6 @@ if __name__ == "__main__":
     seq1, seq2 = zip(*data)
     # seq1 = [3,4,2,1,3,3]
     # seq2 = [4,3,5,3,9,3]
-    print(f"Total Similarity bewteen two lists : {total_similarity(seq1, seq2)}")
+    print(
+        f"Total Similarity bewteen two lists : {total_similarity(seq1, seq2)}"
+    )

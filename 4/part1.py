@@ -58,7 +58,9 @@ def count_matrix_words(matrix: list[str]):
 
     # Iterate through the matrix to extract words in all directions
     for i, string in enumerate(matrix):
-        reverseMatrix = string[::-1]  # Reverse string for diagonal calculations
+        reverseMatrix = string[
+            ::-1
+        ]  # Reverse string for diagonal calculations
         for j, char in enumerate(string):
             vertWords[j] += char  # Build vertical words
             diag_idx = i - j + n - 1  # compute normlized diag offsets
